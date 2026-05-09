@@ -25,3 +25,8 @@ jobs:
 
       - name: Verify AWS Access
         run: aws sts get-caller-identity
+      
+      - uses: hashicorp/setup-terraform@v3
+
+      - run: terraform init
+      - run: terraform plan
